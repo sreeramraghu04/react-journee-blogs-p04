@@ -55,10 +55,7 @@ function App() {
     <div>
       <Navbar />
       <div className="container mx-auto px-4 pb-4 mt-25 relative">
-        <div
-          className="pt-100"
-        
-        >
+        <div className="pt-100">
           <div className="text-white absolute top-0 left-1/2 transform -translate-x-1/2 text-center z-10 pt-4">
             <div className="flex flex-col text-3xl lg:text-5xl md:text-5xl font-extrabold mb-10 text-shadow-lg text-purple-600 font-mono">
               <span>To travel</span>
@@ -77,13 +74,13 @@ function App() {
           {blogPost.map((blog) =>
             blog.isEditing ? (
               <EditForm
-                key={blog.id || Date.now()} // Ensure key is always unique
+                key={blog.id}
                 blog={blog}
                 updateBlog={(updatedItem) => updateBlog(updatedItem, blog.id)}
               />
             ) : (
               <BlogPost
-                key={blog.id || Date.now()} // Ensure key is always unique
+                key={blog.id}
                 blog={blog}
                 deleteBlog={deleteBlog}
                 editBlog={editBlog}
