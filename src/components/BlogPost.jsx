@@ -12,7 +12,7 @@ const BlogPost = ({ blog, deleteBlog, editBlog }) => {
       <div className="p-2 w-full">
         <h2 className="text-2xl underline font-bold mb-2">{blog.title}</h2>
         <p className="text-gray-700">{blog.description}</p>
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 mt-6">
+        <div className="flex flex-row sm:items-center gap-3 sm:gap-5 mt-6">
           <p className="text-sm text-gray-500 w-full sm:w-[300px]">
             {blog.date} | {blog.day}
           </p>
