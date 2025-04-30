@@ -11,7 +11,7 @@ const BlogPost = ({ blog, deleteBlog, editBlog }) => {
         className="w-full h-64 object-cover rounded-xl"
       />
       <div>
-        <div className="p-2">
+        <div className="p-4">
           <h2 className="text-2xl underline font-bold mb-2">{blog.title}</h2>
           <p className="text-gray-700">{blog.description}</p>
           <div className="flex flex-row gap-5">
