@@ -16,16 +16,14 @@ const BlogPost = ({ blog, deleteBlog, editBlog }) => {
           <p className="text-sm text-gray-500 w-full sm:w-[300px]">
             {blog.date} | {blog.day}
           </p>
-          <div className="flex gap-3">
-            <DeleteForeverIcon
-              className="text-red-600 cursor-pointer opacity-75 hover:opacity-100"
-              onClick={() => deleteBlog(blog.id)}
-            />
-            <EditDocumentIcon
-              className="text-black cursor-pointer opacity-75 hover:opacity-100"
-              onClick={() => editBlog(blog.id)}
-            />
-          </div>
+          <DeleteForeverIcon
+            className="text-red-600 cursor-pointer opacity-75 hover:opacity-100"
+            onClick={() => deleteBlog(blog.id)}
+          />
+          <EditDocumentIcon
+            className="text-black cursor-pointer opacity-75 hover:opacity-100"
+            onClick={() => editBlog(blog.id)}
+          />
         </div>
       </div>
     </div>
@@ -33,5 +31,3 @@ const BlogPost = ({ blog, deleteBlog, editBlog }) => {
 };
 
 export default BlogPost;
-
-
