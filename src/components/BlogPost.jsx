@@ -10,14 +10,14 @@ const BlogPost = ({ blog, deleteBlog, editBlog }) => {
         alt={`Image for ${blog.title}`}
         className="w-full h-64 object-cover rounded-xl"
       />
-      <div className="lg:p-4 p-2">
-        <h2 className="text-2xl underline font-bold mb-2">{blog.title}</h2>
-        <p className="text-gray-700">{blog.description}</p>
-        <div className="flex flex-row gap-5">
-          <p className="text-sm text-gray-500 mt-8 w-[300px]">
-            {blog.date} | {blog.day}
-          </p>
-          <div className="flex flex-row">
+      <div>
+        <div className="p-2">
+          <h2 className="text-2xl underline font-bold mb-2">{blog.title}</h2>
+          <p className="text-gray-700">{blog.description}</p>
+          <div className="flex flex-row gap-5">
+            <p className="text-sm text-gray-500 mt-8 w-[300px]">
+              {blog.date} | {blog.day}
+            </p>
             <DeleteForeverIcon
               className="text-red-600 cursor-pointer mt-8 opacity-75 hover:opacity-100"
               onClick={() => deleteBlog(blog.id)}
@@ -26,6 +26,9 @@ const BlogPost = ({ blog, deleteBlog, editBlog }) => {
               className="text-black cursor-pointer mt-8 opacity-75 hover:opacity-100"
               onClick={() => editBlog(blog.id)}
             />
+          </div>
+          <div className="space-x-2">
+            
           </div>
         </div>
       </div>
