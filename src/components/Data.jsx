@@ -53,7 +53,7 @@ const Data = () => {
     },
     {
       id: 6,
-      title: "Panjab",
+      title: "Punjab",
       description:
         "Punjab is a state in northwest region of India and is one of the most prosperous states. The name Punjab is made of two words Punj (Five) + Aab (Water) i.e. land of five rivers. These five rivers of Punjab are Sutlej, Beas, Ravi, Chenab, and Jhelum.",
       image:

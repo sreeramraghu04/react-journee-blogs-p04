@@ -60,7 +60,7 @@ function App() {
         
         >
           <div className="text-white absolute top-0 left-1/2 transform -translate-x-1/2 text-center z-10 pt-4">
-            <div className="flex flex-col text-4xl lg:text-5xl md:text-5xl font-extrabold mb-10 text-shadow-lg text-purple-600 font-mono">
+            <div className="flex flex-col text-3xl lg:text-5xl md:text-5xl font-extrabold mb-10 text-shadow-lg text-purple-600 font-mono">
               <span>To travel</span>
               <span>is To live</span>
             </div>

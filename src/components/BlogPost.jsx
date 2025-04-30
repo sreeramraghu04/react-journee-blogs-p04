@@ -19,7 +19,7 @@ const BlogPost = ({ blog, deleteBlog, editBlog }) => {
           <p className="text-sm text-gray-500 mt-8 w-[300px]">
             {blog.date} | {blog.day}
           </p>
-          <div className="space-x-2">
+          <div className="">
             <DeleteForeverIcon
               className="text-red-600 cursor-pointer mt-8 opacity-75 hover:opacity-100"
               onClick={() => deleteBlog(blog.id)}
