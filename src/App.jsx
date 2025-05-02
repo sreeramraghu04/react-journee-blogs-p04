@@ -48,7 +48,7 @@ function App() {
 
   //! Show Add Blog Form
   const handleAddBlogClick = () => {
-    setShowBlogForm(true);
+    setShowBlogForm(prev => !prev);
   };
 
   return (

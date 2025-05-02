@@ -128,7 +128,6 @@ const AddBlogForm = ({ addBlogs }) => {
           />
           Upload Your Image Here.
         </label>
-
         {image && (
           <div className="mt-4">
             <img
