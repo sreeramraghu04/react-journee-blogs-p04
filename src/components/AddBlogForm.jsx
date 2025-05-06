@@ -56,7 +56,7 @@ const AddBlogForm = ({ addBlogs }) => {
   };
 
   return (
-    <div className="w-screen lg:h-[630px] md:h-[700px] h-[650px] backdrop-blur-lg rounded-md p-4 lg:mt-5 md:mt-5">
+    <div className="w-screen lg:h-[630px] md:h-[700px] h-[650px] backdrop-blur-lg rounded-md p-4 lg:mt-12 mt-8">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-8 items-center"
