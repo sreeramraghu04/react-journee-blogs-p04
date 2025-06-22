@@ -54,10 +54,10 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="container mx-auto px-4 pb-4 mt-25 relative">
-        <div className="pt-100">
-          <div className="text-white absolute top-0 left-1/2 transform -translate-x-1/2 text-center z-10 pt-4">
-            <div className="flex flex-col text-3xl lg:text-5xl md:text-5xl font-extrabold mb-10 text-shadow-lg text-purple-600 font-mono">
+      <div className="container mx-auto px-4 pb-4 mt-20 relative">
+        <div className="pt-40">
+          <div className="text-white absolute top-0 left-1/2 transform -translate-x-1/2 text-center z-10 pt-2">
+            <div className="flex flex-col text-3xl lg:text-5xl md:text-5xl font-extrabold mb-4 text-shadow-lg text-purple-600 font-mono">
               <span>To travel</span>
               <span>is To live</span>
             </div>
@@ -70,7 +70,7 @@ function App() {
             {showBlogForm && <AddBlogForm addBlogs={addBlogs} />}
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 -mt-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {blogPost.map((blog) =>
             blog.isEditing ? (
               <EditForm
