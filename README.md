@@ -23,4 +23,4 @@ A simple Travel Blog web application built using **React** and **Tailwind CSS** 
 
 ## Demo Link
 
-[live Demo](https://ram-react-travelblog.netlify.app/)
+[Live Demo](https://journex-blog.sreeramraghu.online/)
