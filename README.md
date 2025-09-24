@@ -19,7 +19,7 @@ A simple Travel Blog web application built using **React** and **Tailwind CSS** 
 
 ## Screenshots
 
-![alt text](travelblog.png)
+![alt text](journex-blogs.png)
 
 ## Demo Link
 
