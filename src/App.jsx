@@ -55,9 +55,9 @@ function App() {
     <div>
       <Navbar />
       {/* Hero Section */}
-      <div className="container mx-auto px-4 pb-4 mt-20 relative">
-        <div className="pt-20 text-center">
-          <div className="flex flex-col text-3xl lg:text-5xl md:text-5xl font-extrabold mb-6 text-shadow-lg text-purple-600 font-mono">
+      <div className="container mx-auto px-4 pb-4 mt-2 relative">
+        <div className="pt-25 text-center">
+          <div className="flex flex-col text-3xl lg:text-3xl md:text-5xl font-extrabold mb-4 text-shadow-lg text-purple-600 font-mono">
             <span>🧳To travel</span>
             <span>is To live✨</span>
           </div>
@@ -70,7 +70,7 @@ function App() {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
           {/* Show AddBlogForm inside grid as first card */}
           {showBlogForm && <AddBlogForm addBlogs={addBlogs} />}
 
