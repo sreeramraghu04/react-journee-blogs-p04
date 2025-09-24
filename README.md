@@ -1,4 +1,4 @@
-# Public Blog Website
+# JourneX - A Public Bloging Website
 
 A simple Travel Blog web application built using **React** and **Tailwind CSS** that allows users to **Create, Read, Update, and Delete (CRUD)** blog posts about their travel experiences.
 
@@ -23,4 +23,4 @@ A simple Travel Blog web application built using **React** and **Tailwind CSS** 
 
 ## Demo Link
 
-[Live Demo](https://journex-blog.sreeramraghu.online/)
+[Live Demo](https://journex-blogs.sreeramraghu.online/)

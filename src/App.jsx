@@ -58,8 +58,8 @@ function App() {
       <div className="container mx-auto px-4 pb-4 mt-20 relative">
         <div className="pt-20 text-center">
           <div className="flex flex-col text-3xl lg:text-5xl md:text-5xl font-extrabold mb-6 text-shadow-lg text-purple-600 font-mono">
-            <span>To travel</span>
-            <span>is To live</span>
+            <span>🧳To travel</span>
+            <span>is To live✨</span>
           </div>
           <button
             className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded font-mono hover:cursor-pointer"
