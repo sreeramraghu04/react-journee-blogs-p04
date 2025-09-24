@@ -1,16 +1,10 @@
 import { useState } from "react";
-/* import PropTypes from "prop-types"; */ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 const AddBlogForm = ({ addBlogs }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-
   const [date, setDate] = useState("");
-
-  /* const [date, setDate] = useState(new Date());
-  etInterval(() => setDate(new Date()), 1000);
-  clearInterval(date); */
-
   const [day, setDay] = useState("");
   const [image, setImage] = useState(null);
   const [error, setError] = useState("");
@@ -23,6 +17,7 @@ const AddBlogForm = ({ addBlogs }) => {
     }
 
     const newBlog = {
+      id: Date.now(),
       title,
       description,
       date: formatDate(date),
@@ -56,46 +51,46 @@ const AddBlogForm = ({ addBlogs }) => {
   };
 
   return (
-    <div className="w-screen lg:h-[630px] md:h-[700px] h-[650px] backdrop-blur-lg rounded-md p-4 lg:mt-12 mt-8">
+    <div className="w-full max-w-md backdrop-blur-lg bg-gray-200 rounded-xl shadow-md p-4 flex flex-col justify-center items-center mx-auto">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-8 items-center"
+        className="flex flex-col gap-6 items-center w-full"
       >
         <input
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="border-2 border-black p-2 outline-none rounded-md hover:border-3 w-[300px] lg:w-[500px] md:w-[500px] text-black mt-15"
+          className="border-2 border-black p-2 outline-none rounded-md w-full text-black"
           type="text"
-          placeholder="Title :"
+          placeholder="Title:"
         />
+
         <textarea
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="border-2 border-black p-2 outline-none rounded-md hover:border-3 w-[300px] lg:w-[500px] md:w-[500px] text-black"
-          placeholder="Description :"
+          className="border-2 border-black p-2 outline-none rounded-md w-full text-black"
+          placeholder="Description:"
+          rows={4}
         />
 
-        <div className="flex flex-col gap-2">
-          <div className="relative">
-            <input
-              id="date-picker"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-              className="border-2 border-black p-2 outline-none rounded-md text-black pl-10 hover:border-3 w-[250px] lg:w-[450px] md:w-[450px]"
-              type="date"
-              placeholder="Click to select a date"
-            />
-            <CalendarMonthIcon className="absolute top-1/2 -translate-y-1/2 left-3 text-black"/>
-          </div>
+        {/* Date Picker */}
+        <div className="relative w-full">
+          <input
+            id="date-picker"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            className="border-2 border-black p-2 outline-none rounded-md text-black pl-10 w-full"
+            type="date"
+          />
+          <CalendarMonthIcon className="absolute top-1/2 -translate-y-1/2 left-3 text-black" />
         </div>
+
+        {/* Day Select */}
         <select
           value={day}
           onChange={(e) => setDay(e.target.value)}
-          className="border-2 border-black p-2 outline-none rounded-md hover:border-3 w-[200px] lg:w-[400px] md:w-[400px] text-black"
+          className="border-2 border-black p-2 outline-none rounded-md w-full text-black"
         >
-          <option className="text-black" value="">
-            Select Day
-          </option>
+          <option value="">Select Day</option>
           <option className="text-black" value="Monday">
             Monday
           </option>
@@ -119,7 +114,8 @@ const AddBlogForm = ({ addBlogs }) => {
           </option>
         </select>
 
-        <label className="border-2 border-black p-2 outline-none rounded-md cursor-pointer text-center hover:border-3 w-[200px] lg:w-[300px] md:w-[300px] text-black">
+        {/* Image Upload */}
+        <label className="border-2 border-black p-2 outline-none rounded-md cursor-pointer text-center w-full text-black">
           <input
             type="file"
             accept="image/*"
@@ -128,20 +124,22 @@ const AddBlogForm = ({ addBlogs }) => {
           />
           Upload Your Image Here.
         </label>
+
         {image && (
-          <div className="mt-4">
+          <div className="mt-4 w-full flex justify-center">
             <img
               src={image}
               alt="Blog preview"
-              className="max-w-full h-auto rounded-md"
+              className="max-h-64 rounded-md object-contain"
             />
           </div>
         )}
+
         {error && <p className="text-red-500 mt-2">{error}</p>}
 
         <button
           type="submit"
-          className="border-2 border-black rounded-md font-semibold bg-black font-mono p-2 hover:border-3 hover:border-white w-[150px] lg:w-[250px] md:w-[250px] text-white"
+          className="border-2 border-black rounded-md font-semibold bg-black font-mono p-2 w-full text-purple-500 hover:border-white"
         >
           Add Your Blog!
         </button>
@@ -149,9 +147,5 @@ const AddBlogForm = ({ addBlogs }) => {
     </div>
   );
 };
-
-/* AddBlogForm.propTypes = {
-  addBlog: PropTypes.addBlog,
-}; */
 
 export default AddBlogForm;

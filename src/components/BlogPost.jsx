@@ -3,7 +3,7 @@ import EditDocumentIcon from "@mui/icons-material/EditDocument";
 
 const BlogPost = ({ blog, deleteBlog, editBlog }) => {
   return (
-    <div className="w-full max-w-md bg-gray-200 rounded-xl shadow-md p-4 flex flex-col justify-center items-end mt-10 mx-auto">
+    <div className="w-full max-w-md bg-gray-200 rounded-xl shadow-md p-6 flex flex-col justify-center items-end mx-auto">
       <img
         src={blog.image}
         alt={`Image for ${blog.title}`}

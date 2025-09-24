@@ -12,7 +12,7 @@ function App() {
   //! add new blog post
   const addBlogs = (newBlogs) => {
     const newEntry = { id: Date.now(), ...newBlogs };
-    const updatedBlogPost = [...blogPost, newEntry];
+    const updatedBlogPost = [newEntry, ...blogPost]; // add new blog at the top
     setBlogPost(updatedBlogPost);
     localStorage.setItem("data", JSON.stringify(updatedBlogPost));
     setShowBlogForm(false);
@@ -48,29 +48,32 @@ function App() {
 
   //! Show Add Blog Form
   const handleAddBlogClick = () => {
-    setShowBlogForm(prev => !prev);
+    setShowBlogForm((prev) => !prev);
   };
 
   return (
     <div>
       <Navbar />
+      {/* Hero Section */}
       <div className="container mx-auto px-4 pb-4 mt-20 relative">
-        <div className="pt-40">
-          <div className="text-white absolute top-0 left-1/2 transform -translate-x-1/2 text-center z-10 pt-2">
-            <div className="flex flex-col text-3xl lg:text-5xl md:text-5xl font-extrabold mb-4 text-shadow-lg text-purple-600 font-mono">
-              <span>To travel</span>
-              <span>is To live</span>
-            </div>
-            <button
-              className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded font-mono hover:cursor-pointer"
-              onClick={handleAddBlogClick}
-            >
-              Add Your Blog Here....!
-            </button>
-            {showBlogForm && <AddBlogForm addBlogs={addBlogs} />}
+        <div className="pt-20 text-center">
+          <div className="flex flex-col text-3xl lg:text-5xl md:text-5xl font-extrabold mb-6 text-shadow-lg text-purple-600 font-mono">
+            <span>To travel</span>
+            <span>is To live</span>
           </div>
+          <button
+            className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded font-mono hover:cursor-pointer"
+            onClick={handleAddBlogClick}
+          >
+            {showBlogForm ? "Close Form!" : "Wants to add....?"}
+          </button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        {/* Blog Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+          {/* Show AddBlogForm inside grid as first card */}
+          {showBlogForm && <AddBlogForm addBlogs={addBlogs} />}
+
           {blogPost.map((blog) =>
             blog.isEditing ? (
               <EditForm
