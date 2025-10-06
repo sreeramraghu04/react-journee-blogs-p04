@@ -13,13 +13,13 @@ A simple Travel Blog web application built using **React** and **Tailwind CSS** 
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React, Tailwind CSS
+- **Frontend**: Basic React, Tailwind CSS
 - **State Management**: useState, useEffect
 - **JavaScript**: (ES6+)
 
 ## Screenshots
 
-![alt text](journex-blogs.png)
+![alt text](journee-blogs.png)
 
 ## Demo Link
 
