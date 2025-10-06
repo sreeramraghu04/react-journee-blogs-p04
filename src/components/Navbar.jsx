@@ -6,10 +6,10 @@ const Navbar = () => {
           <h1>Journee</h1>
         </div>
         <ul className="flex items-center space-x-8 md:flex font-mono text-lg">
-          <li className="text-gray-500 hover:text-black transition duration-100 hover:cursor-pointer">
+          <li className="text-gray-500 hover:text-black transition duration-100 hover:cursor-pointer lg:flex md:flex hidden">
             Home
           </li>
-          <li className="text-purple-500  hover:text-red-500 underline underline-offset-2 font-bold transition duration-100 hover:cursor-pointer">
+          <li className="text-purple-500  hover:text-red-500 underline underline-offset-2 font-bold transition duration-100 hover:cursor-pointer lg:flex md:flex hidden">
             Blog
           </li>
           <li className="text-gray-500 hover:text-black transition duration-100 hover:cursor-pointer lg:flex md:flex hidden">
