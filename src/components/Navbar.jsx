@@ -3,9 +3,9 @@ const Navbar = () => {
     <nav className="bg-gray-200 h-20 px-10 flex justify-center items-center fixed top-0 w-full z-50 ">
       <div className="container mx-auto flex items-center justify-between">
         <div className="text-3xl font-bold font-mono bg-clip-text text-purple-500">
-          <h1>Journee</h1>{" "}
+          <h1>Journee</h1>
         </div>
-        <ul className="flex items-center space-x-4 md:flex font-mono">
+        <ul className="flex items-center space-x-8 md:flex font-mono text-lg">
           <li className="text-gray-500 hover:text-black transition duration-100 hover:cursor-pointer">
             Home
           </li>
@@ -17,9 +17,6 @@ const Navbar = () => {
           </li>
           <li className="text-gray-500 hover:text-black transition duration-100 hover:cursor-pointer lg:flex md:flex hidden">
             About
-          </li>
-          <li className="text-gray-500 hover:text-black transition duration-100 hover:cursor-pointer">
-            Contact
           </li>
         </ul>
       </div>

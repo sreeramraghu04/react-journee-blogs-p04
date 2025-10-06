@@ -57,12 +57,12 @@ function App() {
       {/* Hero Section */}
       <div className="container mx-auto px-4 pb-4 mt-2 relative">
         <div className="pt-25 text-center">
-          <div className="flex flex-col text-3xl lg:text-3xl md:text-5xl font-extrabold mb-4 text-shadow-lg text-purple-600 font-mono">
-            <span>🧳To travel</span>
-            <span>is To live✨</span>
+          <div className="flex flex-col text-3xl lg:text-4xl md:text-5xl font-extrabold mb-2 mt-4 text-shadow-lg text-purple-600 font-mono">
+            <span>To travel</span>
+            <span>is To live🧳</span>
           </div>
           <button
-            className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded font-mono hover:cursor-pointer"
+            className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded font-mono hover:cursor-pointer mt-2"
             onClick={handleAddBlogClick}
           >
             {showBlogForm ? "Close Form!" : "Wants to add....?"}
@@ -70,7 +70,7 @@ function App() {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
           {/* Show AddBlogForm inside grid as first card */}
           {showBlogForm && <AddBlogForm addBlogs={addBlogs} />}
 
